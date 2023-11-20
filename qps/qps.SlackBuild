@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Slackware build script for qps 
+# Slackware build script for qps
 
 # Copyright 2023 Frank Honolka <slackernetuk@gmail.com>
 # All rights reserved.
@@ -24,10 +24,10 @@
 
 cd $(dirname $0) ; CWD=$(pwd)
 
-PRGNAM=qps			
-VERSION=${VERSION:-2.8.0}	
+PRGNAM=qps
+VERSION=${VERSION:-2.8.0}
 BUILD=${BUILD:-1}
-TAG=${TAG:-_snuk}		
+TAG=${TAG:-_snuk}
 PKGTYPE=${PKGTYPE:-txz}
 
 if [ -z "$ARCH" ]; then
@@ -43,9 +43,9 @@ if [ ! -z "${PRINT_PACKAGE_NAME}" ]; then
   exit 0
 fi
 
-TMP=${TMP:-/tmp/snuk}		
+TMP=${TMP:-/tmp/snuk}
 PKG=$TMP/package-$PRGNAM
-OUTPUT=${OUTPUT:-/tmp}		
+OUTPUT=${OUTPUT:-/tmp}
 
 if [ "$ARCH" = "i586" ]; then
   SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -56,12 +56,15 @@ elif [ "$ARCH" = "i686" ]; then
 elif [ "$ARCH" = "x86_64" ]; then
   SLKCFLAGS="-O2 -fPIC"
   LIBDIRSUFFIX="64"
+elif [ "$ARCH" = "aarch64" ]; then
+  SLKCFLAGS="-O2 -fPIC"
+  LIBDIRSUFFIX="64"
 else
   SLKCFLAGS="-O2"
   LIBDIRSUFFIX=""
 fi
 
-set -e 
+set -e
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
