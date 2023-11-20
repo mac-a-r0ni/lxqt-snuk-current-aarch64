@@ -117,7 +117,7 @@ CXXFLAGS="$SLKCFLAGS" \
   --mandir=/usr/man \
   --enable-startup-notification \
   --enable-static=no \
-  --build=$ARCH-slackware-linux
+  --build=$ARCH-unknown-linux-gnu
 
 make
 make install DESTDIR=$PKG
