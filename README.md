@@ -1,3 +1,5 @@
+# This is a fork of [snuk's](https://gitlab.com/slackernetukbuilds/lxqt-snuk-current) repo, adding aarch64 to the build. 
+
 # This project based on [LXQt](https://github.com/lxqt) &  [Slackware](http://www.slackware.com/) 
 
 # Installing
@@ -12,8 +14,8 @@ If KDE- Dependencies are not installed, run as root:<br><br>
 
 
 ```
-$ git clone https://gitlab.com/slackernetukbuilds/lxqt-snuk-current.git 
-$ cd lxqt-snuk-current 
+$ git clone https://github.com/mac-a-r0ni/lxqt-snuk-current-aarch64.git 
+$ cd lxqt-snuk-current-aarch64 
 # sh build.sh
 ```
 
